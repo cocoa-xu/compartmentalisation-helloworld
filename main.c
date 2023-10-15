@@ -133,6 +133,13 @@ static void *fun(void *buffer)
 
 int main(int argc, char *argv[])
 {
+
+#ifdef USE_LB_SEALED_CAP
+    printf("using LB-sealed capability\n");
+#else
+    printf("using LPB-sealed capability\n");
+#endif
+
     const cmpt_t *cmpt = create_cmpt(fun, 4 /* pages */);
     int buffer[3] = {2, 3, 0};
 

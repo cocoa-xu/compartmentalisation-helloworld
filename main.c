@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include <sys/mman.h>
 
+#include "morello.h"
+
 /**
 * Wrappable function type.
 */

@@ -15,7 +15,7 @@ hellolb: $(UTIL_SRC) src/lb.S main.c
 	$(CC) $(PURECAP_CFLAGS) $(CFLAGS) -Iutil -DUSE_LB_SEALED_CAP $(LB_SRC) -o hellolb-purecap
 
 hellolpb: $(UTIL_SRC) src/lpb.S main.c
-	$(CC) $(PURECAP_CFLAGS) $(CFLAGS) $(LPB_SRC) -o hellolpb-purecap
+	$(CC) $(PURECAP_CFLAGS) $(CFLAGS) -Iutil $(LPB_SRC) -o hellolpb-purecap
 
 example: hellolb hellolpb
 	@echo > /dev/null

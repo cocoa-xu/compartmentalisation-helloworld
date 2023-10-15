@@ -3,8 +3,8 @@
 override cmpt_this := $(lastword $(MAKEFILE_LIST))
 override util_src := util/capprint.c util/morello.c
 
-override hellolb_src := $(util_src) src/lb.S src/main.c
-override hellolpb_src := $(util_src) src/lpb.S src/main.c
+override hellolb_src := $(util_src) src/lb.S src/manager.c src/main.c
+override hellolpb_src := $(util_src) src/lpb.S src/manager.c src/main.c
 
 override CFLAGS := $(CFLAGS) -Iutil
 
